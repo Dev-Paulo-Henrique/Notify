@@ -17,12 +17,13 @@ var firebaseConfig = {
   function sendMessage(){
     var message = document.getElementById("area").value;
     var serie = document.getElementById("serie").value;
+    if(message!==""){
     firebase.database().ref("notify").push().set({
       "Sender": name,
       "Message": message,
       "Serie": serie
-    });
-    document.getElementById("area").value = "";
+    })
+      document.getElementById("area").value = "";
     Swal.fire({
   position: 'center',
   icon: 'success',
@@ -30,7 +31,9 @@ var firebaseConfig = {
   showConfirmButton: false,
   timer: 1500
 })
-
+    }else{
+      alert("Digite algo")
+    }
     return false;
   }
   
