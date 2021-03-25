@@ -32,7 +32,13 @@ var firebaseConfig = {
   timer: 1500
 })
     }else{
-      alert("Digite algo")
+      Swal.fire({
+      position: 'center',
+      icon: 'error',
+      title: 'Digite algo',
+      showConfirmButton: false,
+      timer: 1500
+  })
     }
     return false;
   }
