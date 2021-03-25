@@ -13,9 +13,33 @@ document.write(html);
 
 
 function more(){
+  if(localStorage.getItem("email") && 
+    localStorage.getItem("aluno") !== null && 
+    localStorage.getItem("ano") !== "Informe sua serie"){
   open("chat.html")
+  }else{
+    Swal.fire({
+      position: 'center',
+      icon: 'error',
+      title: 'Informe seus dados',
+      showConfirmButton: false,
+      timer: 1500
+  })
+}
 }
 
 function study(){
+  if(localStorage.getItem("email") && 
+    localStorage.getItem("aluno") !== null && 
+    localStorage.getItem("ano") !== "Informe sua serie"){
   open("study.html")
+  }else{
+    Swal.fire({
+      position: 'center',
+      icon: 'error',
+      title: 'Informe seus dados',
+      showConfirmButton: false,
+      timer: 1500
+  })
+}
 }
