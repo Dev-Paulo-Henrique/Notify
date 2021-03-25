@@ -83,7 +83,7 @@ li{
   align-items: left;
   margin: 8%;
   width: 80%;
-  height: 200px;
+  height: 100vh;
   text-align: left;
   overflow-y: auto;
   margin-right: 20%;
@@ -100,7 +100,7 @@ li{
   align-items: left;
   margin: 8%;
   width: 80%;
-  height: 250px;
+  height: 100vh;
   text-align: left;
   overflow-y: auto;
   margin-right: 20%; 
