@@ -79,7 +79,7 @@ li{
   border-right: 2px solid white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: left;
   margin: 8%;
   width: 80%;
@@ -96,7 +96,7 @@ li{
   border-right: 2px solid white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: left;
   margin: 8%;
   width: 80%;
