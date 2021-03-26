@@ -19,12 +19,32 @@ var firebaseConfig = {
     localStorage.setItem("email", email)
     localStorage.setItem("aluno", aluno)
     localStorage.setItem("ano", ano)
+    if(localStorage.getItem("email") && 
+    localStorage.getItem("aluno") !== null && 
+    localStorage.getItem("ano") !== "Informe sua serie"){
     firebase.database().ref("chat").push().set({
       "Email": email,
       "Aluno": aluno,
       "Ano": ano,
       "Al": "Aluno Novo",
-      "Message": aluno + " - " + ano + " foi cadastrado"    })
+      "Message": aluno + " - " + ano + " foi cadastrado"
+    })
+    Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Cadastrado',
+  showConfirmButton: false,
+  timer: 1500
+  })
+    }else{
+      Swal.fire({
+      position: 'center',
+      icon: 'error',
+      title: 'Informe seus dados',
+      showConfirmButton: false,
+      timer: 1500
+  })
+    }
 }
 
   firebase.database().ref("notify").on("child_added", function (snapshot){
