@@ -16,14 +16,15 @@ var firebaseConfig = {
     var email = document.getElementById("email").value;
     var aluno = document.getElementById("aluno").value;
     var ano = document.getElementById("ano").value;
-    firebase.database().ref("chat").push().set({
-      "Email": email,
-      "Aluno": aluno,
-      "Ano": ano
-    })
     localStorage.setItem("email", email)
     localStorage.setItem("aluno", aluno)
     localStorage.setItem("ano", ano)
+    firebase.database().ref("chat").push().set({
+      "Email": email,
+      "Aluno": aluno,
+      "Ano": ano,
+      "Al": "Aluno Novo",
+      "Message": aluno + " - " + ano + " foi cadastrado"    })
 }
 
   firebase.database().ref("notify").on("child_added", function (snapshot){
