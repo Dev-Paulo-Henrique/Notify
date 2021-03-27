@@ -1,7 +1,7 @@
 var study = document.getElementById("study");
 
 study = "<h1>Salas de Aulas</h1>";
-study += `<p>Usuário: ${localStorage.getItem('aluno')}</p>`
+study += `<p>Usuário: <span>${localStorage.getItem('aluno')}</span></p><br><p>Série: <span>${localStorage.getItem('ano')}</span></p>`
 study += "<br>"
 study += "<div class='inp'>"
 study += "<input type='button' value='1°A Horário' onclick='umha()'>"
