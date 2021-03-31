@@ -1,7 +1,12 @@
 var study = document.getElementById("study");
+var data = new Date();
+var dias = new Array(
+ 'Domingo','Segunda-Feira','Terça-Feira','Quarta-Feira','Quinta-Feira','Sexta-Feira','Sábado'
+);
 
-study = "<h1>Salas de Aulas</h1>";
-study += `<p>Usuário: <span>${localStorage.getItem('aluno')}</span></p><br><p>Série: <span>${localStorage.getItem('ano')}</span></p>`
+
+study = "<h1>Horários</h1>";
+study += `<p>Hoje é ` + `<span>${dias[data.getDay()]}</span><br><br>Usuário: <span>${localStorage.getItem('aluno')}</span></p><br><p>Série: <span>${localStorage.getItem('ano')}</span></p>`
 study += "<br>"
 study += "<div class='inp'>"
 study += "<input type='button' value='1°A Horário' onclick='umha()'>"
