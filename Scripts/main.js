@@ -18,7 +18,7 @@ m = today.getMinutes();
 
 document.getElementById('txt').innerHTML = h + ":" + m;
 setTimeout('time()', 10000);
-if (h >= 13 && h <= 19) {
+if (h >= 13 && h < 19) {
   Swal.fire({
     position: 'center',
     icon: 'warning',
@@ -27,6 +27,14 @@ if (h >= 13 && h <= 19) {
     timer: 2000
   })
 }
+if (h >= 7 && h < 13) {
+  Swal.fire({
+    position: 'center',
+    icon: 'warning',
+    title: 'Está no turno de aula!',
+    showConfirmButton: false,
+    timer: 2000
+  })
 }
 
 function more(){
