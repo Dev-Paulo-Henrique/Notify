@@ -3,7 +3,13 @@ var data = new Date();
 var dias = new Array(
  'Domingo','Segunda-Feira','Terça-Feira','Quarta-Feira','Quinta-Feira','Sexta-Feira','Sábado'
 );
-
+Swal.fire({
+    position: 'center',
+    icon: 'warning',
+    title: 'Acesse o Portal Educação!',
+    showConfirmButton: false,
+    timer: 2000
+  })
 
 study = "<h1>Horários</h1>";
 study += `<p>Hoje é ` + `<span>${dias[data.getDay()]}</span><br><br>Usuário: <span>${localStorage.getItem('aluno')}</span></p><br><p>Série: <span>${localStorage.getItem('ano')}</span></p>`
